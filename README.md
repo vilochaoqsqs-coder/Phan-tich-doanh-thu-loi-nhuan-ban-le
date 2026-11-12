@@ -126,3 +126,25 @@ Mở các file trong thư mục `notebooks/` bằng VS Code hoặc Jupyter Noteb
 - **Phân hóa khu vực & Thất thoát hoàn trả:** Khu vực `Central` có trung vị đơn hàng thấp nhất toàn quốc (`$45.94` so với `$61.00` ở `West`, kiểm định ANOVA $p = 8.99 \times 10^{-6}$)[cite: 19]. Toàn hệ thống có **818 đơn hoàn trả (8.36%)**, gây thất thoát **`$202,116.72`** doanh thu — đặc biệt tập trung ở vùng `West` (`$69,154.68`)[cite: 19].
 - **Hành vi phân khúc khách hàng (`Segment`):** Kiểm định thống kê ($p = 0.8150 > 0.05$) cho thấy giá trị trung bình mỗi đơn hàng giữa khối doanh nghiệp (`Corporate`, `Home Office`) và khách lẻ (`Consumer`) không có sự khác biệt đáng kể, mở ra cơ hội áp dụng chính sách chiết khấu theo sản lượng B2B[cite: 19].
 - **Tính mùa vụ rõ rệt:** Doanh thu Quý 4 (Tháng 9, 11, 12) chiếm tới **37.9%** tổng doanh thu cả năm (đạt đỉnh vào Tháng 11 với `$345,028.19` và chạm đáy vào Tháng 2 với `$59,371.12`)[cite: 19].
+---
+
+## 6. Đạo đức Dữ liệu (Data Ethics Checklist)
+
+Nhóm tuân thủ các nguyên tắc đạo đức trong Khoa học Dữ liệu xuyên suốt quá trình thu thập, xử lý, mô hình hóa và đề xuất giải pháp kinh doanh:
+
+### 1. Nguồn dữ liệu và Giấy phép sử dụng
+- **Nguồn gốc công khai:** Bộ dữ liệu *Superstore Sales (Sales Forecasting)* được thu thập từ kho dữ liệu mở trên nền tảng Kaggle (`rohitsahoo/sales-forecasting`)[cite: 19, 25].
+- **Phạm vi sử dụng:** Dữ liệu chỉ được sử dụng cho mục đích học tập, nghiên cứu học thuật trong khuôn khổ môn Khoa học Dữ liệu; tuyệt đối không khai thác vì mục đích thương mại trái phép[cite: 25].
+
+### 2. Quyền riêng tư và Bảo mật thông tin (Privacy & PII)
+- **Ẩn danh hóa trong phân tích:** Tập dữ liệu gốc có chứa các trường định danh khách hàng như `Customer ID`, `Customer Name` và `Postal Code`[cite: 2, 3]. Trong toàn bộ quá trình phân tích và trực quan hóa, nhóm chỉ tổng hợp dữ liệu ở cấp độ vĩ mô (theo phân khúc `Segment`, khu vực `Region`, danh mục `Category`), không công khai danh tính hay lịch sử mua sắm của bất kỳ cá nhân cụ thể nào[cite: 19].
+- **Bảo mật môi trường:** Loại bỏ toàn bộ thông tin cá nhân và đường dẫn thư mục nội bộ trên máy tính cá nhân khỏi mã nguồn trước khi đẩy lên GitHub.
+
+### 3. Khả năng thiên lệch (Bias) trong dữ liệu và mô hình
+- **Thiên lệch địa lý và mẫu dữ liệu:** Dữ liệu chỉ phản ánh hoạt động bán lẻ tại thị trường Hoa Kỳ (`United States`) và có sự phân bổ đơn hàng không đồng đều giữa các khu vực (vùng `West` có lượng giao dịch cao hơn đáng kể so với `South`)[cite: 2, 19]. Do đó, các kết luận không thể áp dụng máy móc cho các thị trường quốc tế khác[cite: 2, 19].
+- **Thiên lệch từ mô hình hồi quy:** Mô hình Linear Regression đạt $R^2 = 0.4463$ dựa nhiều vào lịch sử chi tiêu (`Log_Cust_Mean_Sales`) và danh mục sản phẩm[cite: 19]. Khi triển khai các chính sách ưu đãi khách hàng VIP (`REC-02`), doanh nghiệp cần kết hợp đánh giá thực tế để tránh phân biệt đối xử hoặc bỏ rơi nhóm khách hàng mới và khách hàng mua đơn nhỏ[cite: 19].
+
+### 4. Tính minh bạch của mô hình và kết quả (Transparency & Reproducibility)
+- **Minh bạch quy trình xử lý:** Mọi bước làm sạch dữ liệu (xóa 11 dòng thiếu `Postal Code` chiếm 0,11% từ 9.800 xuống còn 9.789 dòng) đều được ghi nhận rõ ràng trong mã nguồn và tài liệu[cite: 2, 5, 25].
+- **Trung thực về giới hạn dữ liệu:** Tập dữ liệu gốc không cung cấp cột chi phí vốn hay lợi nhuận ròng (`Profit`)[cite: 2]. Nhóm đã minh bạch giới hạn này và sử dụng doanh thu (`Sales`) kết hợp dữ liệu hoàn trả (`returns.csv`, thất thoát `$202,116.72`) làm cơ sở đánh giá hiệu quả kinh doanh[cite: 19].
+- **Khả năng tái lập (Reproducibility):** Toàn bộ mã nguồn 8 notebook, giả định kiểm định thống kê ($\alpha = 0.05$) và danh sách thư viện (`requirements.txt`) đều được công khai đầy đủ để bất kỳ ai cũng có thể chạy lại và kiểm chứng độc lập[cite: 1, 16, 17, 19].
