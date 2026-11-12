@@ -17,8 +17,8 @@ Dự án thực hiện phân tích dữ liệu bán lẻ của chuỗi Superstor
 ```text
 Phan-tich-doanh-thu-loi-nhuan-ban-le/
 ├── data/
-│   ├── raw/                                     # Dữ liệu gốc ban đầu (train.csv, returns.csv, region_managers.csv)
-│   └── processed/                               # Dữ liệu đã làm sạch (superstore_cleaned.csv)
+│   ├── raw/                                     # Dữ liệu gốc ban đầu (train.csv, returns.csv, region_managers)
+│   └── processed/                               # Dữ liệu đã làm sạch (superstore_cleaned.csv, outlier_comparison_table.csv)
 ├── notebooks/                                   # Các notebook phân tích theo thứ tự thực hiện
 │   ├── 01_doc_va_kham_pha_du_lieu.ipynb         # Đọc dữ liệu và khám phá cấu trúc ban đầu
 │   ├── 02_eda_phan_tich_kham_pha.ipynb          # Phân tích khám phá dữ liệu (EDA) và trực quan hóa
