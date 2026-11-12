@@ -32,7 +32,7 @@ Phan-tich-doanh-thu-loi-nhuan-ban-le/
 │   ├── figures/                                 # Biểu đồ trực quan xuất ra từ các notebook
 │   ├── business_recommendations_final.csv       # Tổng hợp khuyến nghị kinh doanh
 │   ├── hypothesis_testing_summary.csv           # Bảng tóm tắt kết quả kiểm định thống kê
-│   ├── prescriptive_recommendations_*.csv       # Chi tiết các đề xuất tối ưu
+│   ├── prescriptive_recommendations_defense.md  # Chi tiết các đề xuất tối ưu
 │   ├── regression_coefficients.csv              # Hệ số của mô hình hồi quy
 │   └── regression_metrics.csv                   # Chỉ số đánh giá độ chính xác mô hình (R2, MAE, RMSE)
 ├── requirements.txt                             # Danh sách thư viện Python cần thiết
@@ -107,7 +107,7 @@ Mở các file trong thư mục `notebooks/` bằng VS Code hoặc Jupyter Noteb
 6. **`06_prescriptive_analysis.ipynb`**
    - **Mô tả:** Phân tích đề xuất (Prescriptive Analytics) nhằm tối ưu danh mục sản phẩm, khu vực và chiến lược bán hàng.
    - **Đầu vào:** `data/raw/train.csv` (hoặc `data/processed/superstore_cleaned.csv`)
-   - **Đầu ra:** `reports/business_recommendations_final.csv`, `reports/prescriptive_recommendations_*.csv`
+   - **Đầu ra:** `reports/business_recommendations_final.csv`, `reports/prescriptive_recommendations_defense.md`
 
 7. **`07_hoi_quy_tuyen_tinh.ipynb`**
    - **Mô tả:** Tiền xử lý biến phân loại (`OneHotEncoder`) và huấn luyện mô hình hồi quy tuyến tính (`LinearRegression`) dự đoán doanh thu.
