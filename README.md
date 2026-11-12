@@ -118,3 +118,11 @@ Mở các file trong thư mục `notebooks/` bằng VS Code hoặc Jupyter Noteb
    - **Mô tả:** Thực hiện các kiểm định giả thuyết thống kê với mức ý nghĩa $\alpha = 0.05$ và rút ra kết luận kinh doanh.
    - **Đầu vào:** `data/processed/superstore_cleaned.csv`
    - **Đầu ra:** `reports/hypothesis_testing_summary.csv`
+---
+
+## 5. Kết quả và Insight chính
+
+- **Quy luật Pareto & Ngành hàng mũi nhọn:** Top 25% đơn hàng giá trị cao nhất đóng góp **83.28%** tổng doanh thu (`$1,875,912.29` / `$2,252,607.41`)[cite: 19]. Hai nhóm `Technology` và `Furniture` tạo ra **68.85%** doanh thu, trong khi `Office Supplies` chiếm **60.30%** số lượng đơn nhưng giá trị trung vị chỉ đạt `$27.36`/đơn[cite: 19].
+- **Phân hóa khu vực & Thất thoát hoàn trả:** Khu vực `Central` có trung vị đơn hàng thấp nhất toàn quốc (`$45.94` so với `$61.00` ở `West`, kiểm định ANOVA $p = 8.99 \times 10^{-6}$)[cite: 19]. Toàn hệ thống có **818 đơn hoàn trả (8.36%)**, gây thất thoát **`$202,116.72`** doanh thu — đặc biệt tập trung ở vùng `West` (`$69,154.68`)[cite: 19].
+- **Hành vi phân khúc khách hàng (`Segment`):** Kiểm định thống kê ($p = 0.8150 > 0.05$) cho thấy giá trị trung bình mỗi đơn hàng giữa khối doanh nghiệp (`Corporate`, `Home Office`) và khách lẻ (`Consumer`) không có sự khác biệt đáng kể, mở ra cơ hội áp dụng chính sách chiết khấu theo sản lượng B2B[cite: 19].
+- **Tính mùa vụ rõ rệt:** Doanh thu Quý 4 (Tháng 9, 11, 12) chiếm tới **37.9%** tổng doanh thu cả năm (đạt đỉnh vào Tháng 11 với `$345,028.19` và chạm đáy vào Tháng 2 với `$59,371.12`)[cite: 19].
